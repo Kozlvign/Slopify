@@ -97,11 +97,26 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $("#loginForm").hide();
-                $("#registerForm").show();
-            });
-        </script>
+        <?php 
+        
+        if(isset($_POST['registerButton'])) {
+            echo '<script>
+                    $(document).ready(function() {
+
+                    $("#loginForm").hide();
+                    $("#registerForm").show();
+                    });
+                </script>';
+        } else {
+            echo '<script>
+                     $(document).ready(function() {
+
+                    $("#loginForm").show();
+                    $("#registerForm").hide();
+                    });
+                </script>';
+        }
+        
+        ?>
     </body>
 </html>

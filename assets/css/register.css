@@ -82,8 +82,9 @@ body {
 .hasAccountText span {
     font-weight: bold;
     font-size: 12px;
+    cursor: pointer;
 }
 
 #registerForm {
-    display: none;
+    display: none !important;
 }
